@@ -15,6 +15,6 @@ public class TargetPoint : MonoBehaviour, IDiabloInteractive
 
     public float GetInteractRange()
     {
-        return 0.0f;
+        return 0.1f;
     }
 }

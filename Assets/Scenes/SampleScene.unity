@@ -646,6 +646,7 @@ MonoBehaviour:
   controller: {fileID: 998458898}
   speed: 10
   myTargetPoint: {fileID: 895851267}
+  anim: {fileID: 1522391636}
 --- !u!143 &998458898
 CharacterController:
   m_ObjectHideFlags: 0
@@ -685,7 +686,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 998458896}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -737,7 +738,79 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1588239652}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1040799682
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 998458902}
+    m_Modifications:
+    - target: {fileID: 1475339451434976, guid: bde7b389ddf0f884bb02f5a01b9798b4, type: 3}
+      propertyPath: m_Name
+      value: Meshtint Free Santa Claus
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392400078716962, guid: bde7b389ddf0f884bb02f5a01b9798b4, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392400078716962, guid: bde7b389ddf0f884bb02f5a01b9798b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392400078716962, guid: bde7b389ddf0f884bb02f5a01b9798b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392400078716962, guid: bde7b389ddf0f884bb02f5a01b9798b4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392400078716962, guid: bde7b389ddf0f884bb02f5a01b9798b4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392400078716962, guid: bde7b389ddf0f884bb02f5a01b9798b4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392400078716962, guid: bde7b389ddf0f884bb02f5a01b9798b4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392400078716962, guid: bde7b389ddf0f884bb02f5a01b9798b4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392400078716962, guid: bde7b389ddf0f884bb02f5a01b9798b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392400078716962, guid: bde7b389ddf0f884bb02f5a01b9798b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392400078716962, guid: bde7b389ddf0f884bb02f5a01b9798b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 95038198796019630, guid: bde7b389ddf0f884bb02f5a01b9798b4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 40db3173a05ae3242b1c182a09b0a183, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bde7b389ddf0f884bb02f5a01b9798b4, type: 3}
+--- !u!95 &1522391636 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95038198796019630, guid: bde7b389ddf0f884bb02f5a01b9798b4, type: 3}
+  m_PrefabInstance: {fileID: 1040799682}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1588239652 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4392400078716962, guid: bde7b389ddf0f884bb02f5a01b9798b4, type: 3}
+  m_PrefabInstance: {fileID: 1040799682}
+  m_PrefabAsset: {fileID: 0}
