@@ -6,30 +6,16 @@ public class DiabloCharacter : MonoBehaviour
 {
     public CharacterController controller;
     public float speed;
-    public TargetPoint myTargetPoint;
+    TargetPoint myTargetPoint;
+    public TargetPoint TargetPointPrefab;
     IDiabloInteractive destination;
     public Animator anim;
 
     float speedblend;
+    public bool HasDestination => destination != null;
 
     void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        if(Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit))
-        {
-            IDiabloInteractive clickedObject = hit.collider.GetComponent<IDiabloInteractive>();
-            if (clickedObject != null)
-            {
-                destination = clickedObject;
-            }
-            else
-            {
-                myTargetPoint.transform.position = hit.point;
-                destination = myTargetPoint;
-            }
-        }
-
         float targetAnimSpeed;
         if (destination != null)
         {
@@ -62,5 +48,20 @@ public class DiabloCharacter : MonoBehaviour
 
         speedblend = Mathf.MoveTowards(speedblend, targetAnimSpeed, Time.deltaTime * 40);
         anim.SetFloat("Speed", speedblend);
+    }
+
+    public void SetDestination(IDiabloInteractive newDestination)
+    {
+        destination = newDestination;
+    }
+
+    public void SetTargetPoint(Vector3 targetPosition)
+    {
+        if(myTargetPoint == null)
+        {
+            myTargetPoint = GameObject.Instantiate(TargetPointPrefab);
+        }
+        myTargetPoint.transform.position = targetPosition;
+        destination = myTargetPoint;
     }
 }
