@@ -31,7 +31,7 @@ public class DiabloCharacter : MonoBehaviour
 
             if (offset.magnitude < destination.GetInteractRange())
             {
-                destination.Interact();
+                destination.Interact(this);
                 destination = null;
             }
             else

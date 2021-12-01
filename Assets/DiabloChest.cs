@@ -9,7 +9,7 @@ public class DiabloChest : MonoBehaviour, IDiabloInteractive
         return transform.position;
     }
 
-    public void Interact()
+    public void Interact(DiabloCharacter interactor)
     {
         GameObject.Destroy(gameObject);
     }
@@ -17,10 +17,5 @@ public class DiabloChest : MonoBehaviour, IDiabloInteractive
     public float GetInteractRange()
     {
         return 2.0f;
-    }
-
-    void Update()
-    {
-        
     }
 }

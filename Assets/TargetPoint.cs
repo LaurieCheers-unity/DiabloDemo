@@ -9,7 +9,7 @@ public class TargetPoint : MonoBehaviour, IDiabloInteractive
         return transform.position;
     }
 
-    public void Interact()
+    public void Interact(DiabloCharacter interactor)
     {
     }
 

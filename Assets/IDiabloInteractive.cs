@@ -6,5 +6,5 @@ public interface IDiabloInteractive
 {
     public Vector3 GetPosition();
     public float GetInteractRange();
-    public void Interact();
+    public void Interact(DiabloCharacter interactor);
 }
